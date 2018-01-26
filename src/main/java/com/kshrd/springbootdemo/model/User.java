@@ -6,24 +6,29 @@ import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
+import io.swagger.annotations.ApiModelProperty;
+
 public class User {
 	
+	@ApiModelProperty(notes = "User's ID, the database generated ID", readOnly = true)
 	private int id;
 
+	@ApiModelProperty(value = "User's Name")
 	@NotEmpty(message = "User name cannot be empty!")
 	@Size(min = 10, max = 30, message = "User name must be between {2} and {1} characters!")
 	private String name;
 
+	@ApiModelProperty(value = "User's Gender")
 	@Size(min = 1, max = 1, message = "Gender must be one character long!")
 	private String gender;
 
-	//@NotEmpty(message = "Image can't be empty!")
+	@ApiModelProperty(value = "User's Thumbnail")
 	private String image;
 	
+	@ApiModelProperty(value = "User's Role", required = true)
 	private List<Role> roles;
 	
-	public User() {
-	}
+	public User() {}
 
 	public User(int id, String name, String gender, String image) {
 		super();

@@ -29,14 +29,10 @@ public class SwaggerConfig {
 	     return new ApiInfo(
 	       "User Management REST API", 
 	       "Some custom description of API.", 
-	       "API", 
+	       "Version 1.0.0", 
 	       "Terms of service", 
-	       new Contact(
-	    		   "Phearun Rath", 
-	    		   "www.rathphearun.com", 
-	    		   "rathphearun123@gmail.com"), 
-	       		   "License of API", 
-	       		   "API license URL");
+	       new Contact("Phearun Rath", "https://www.rathphearun.com", "rathphearun123@gmail.com"), 
+	       "License of API", "https://www.rathphearun.com/license");
 	}
- 
+	
 }

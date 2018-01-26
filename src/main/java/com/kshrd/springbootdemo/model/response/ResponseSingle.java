@@ -1,10 +1,10 @@
 package com.kshrd.springbootdemo.model.response;
 
-public class ResponseSingle extends Response {
+public class ResponseSingle<T> extends Response {
 
-	private Object data;
+	private T data;
 
-	public ResponseSingle(String message, Object data) {
+	public ResponseSingle(String message, T data) {
 		super(message);
 		this.data = data;
 	}
@@ -13,7 +13,7 @@ public class ResponseSingle extends Response {
 		return data;
 	}
 
-	public void setData(Object data) {
+	public void setData(T data) {
 		this.data = data;
 	}
 

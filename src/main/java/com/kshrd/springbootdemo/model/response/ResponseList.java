@@ -4,15 +4,15 @@ import com.kshrd.springbootdemo.utility.Paging;
 
 public class ResponseList extends Response{
 	
+private Object data;
+	
+	private Paging paging;
+	
 	public ResponseList(String message, Object data, Paging paging) {
 		super(message);
 		this.data = data;
 		this.paging = paging;
 	}
-
-	private Object data;
-	
-	private Paging paging;
 
 	public Object getData() {
 		return data;
